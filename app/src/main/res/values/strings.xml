@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">timer app v2</string>
+    <string name="show_timer">5:00</string>
+    <string name="btn_menue_OK">Set Values</string>
+    <string name="btn_start">start</string>
+    <string name="btn_reset">reset</string>
+    <string name="btn_timer_1"> 5 min</string>
+    <string name="btn_timer_2"> 8 min</string>
+    <string name="btn_timer_3">20 min</string>
+    <string name="btn_timer_4">45 min</string>
+    <string name="et_start_time">00</string>
+    <string name="et_devider">:</string>
+</resources>

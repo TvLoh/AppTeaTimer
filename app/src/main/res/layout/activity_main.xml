@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SeekBar
+            android:id="@+id/sb_set_time"
+            style="@android:style/Widget.SeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:max="601"
+            android:progress="300"
+            android:rotationX="15" />
+
+        <Button
+            android:id="@+id/btn_start_stop"
+            style="@android:style/Widget.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/btn_start"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_timer_01"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:longClickable="true"
+                android:rotationY="-3"
+                android:text="@string/btn_timer_1" />
+
+            <Button
+                android:id="@+id/btn_timer_02"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:longClickable="true"
+                android:text="@string/btn_timer_2" />
+
+            <Button
+                android:id="@+id/btn_timer_03"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:longClickable="true"
+                android:text="@string/btn_timer_3" />
+
+            <Button
+                android:id="@+id/btn_timer_04"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:longClickable="true"
+                android:rotationY="3"
+                android:text="@string/btn_timer_4" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_show_timer"
+            style="@android:style/Widget.DeviceDefault.Light.TextView.SpinnerItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/show_timer"
+            android:gravity="center"
+            android:textSize="75sp" />
+
+        <Chronometer
+            android:id="@+id/Chrono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:textColor="@color/colorRed"
+            android:textSize="75sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_set_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/et_set_minuets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints="@string/et_start_time"
+                android:ems="10"
+                android:gravity="end"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:text="@string/et_start_time"
+                android:textSize="75sp" />
+
+            <TextView
+                android:id="@+id/tv_point"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/et_devider"
+                android:textSize="75sp" />
+
+            <EditText
+                android:id="@+id/et_set_sec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints="@string/et_start_time"
+                android:ems="10"
+                android:gravity="start"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:text="@string/et_start_time"
+                android:textSize="75sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
